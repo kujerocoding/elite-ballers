@@ -17,13 +17,56 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
 
   return (
     <nav>
-        <div className={`${flexBetween} fixed top-0 z-30 w-full py-6 border-2 border-red-500`}>
-            <div className={`${flexBetween} mx-auto w-5/6 border-2 border-green-500`}>
-                <div className={`${flexBetween} w-full gap-16 border-2 border-orange-500`}>
-                    <img className="w-14" src={Logo} alt="log" />
-                    <div className={`sm:${flexBetween} w-full border-2 border-black hidden`}>
-                        <div className={`${flexBetween} w-full border-2 border-blue-500`}>
-                            <div className={`${flexBetween} gap-8 text-sm border-2 border-red-500`}>
+        <div className={`${flexBetween} fixed top-0 z-30 w-full py-6 `}>
+            <div className={`${flexBetween} mx-auto w-5/6 gap-16 `}>
+                <img className="w-20" src={Logo} alt="log" />
+                <div className={`sm:${flexBetween} w-full hidden`}>
+                        <div className={`${flexBetween} gap-8 text-sm `}>
+                                <Link 
+                                    page="Home"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <Link 
+                                    page="About Us"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <Link 
+                                    page="Classes"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <Link 
+                                    page="Contact Us"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                        </div>
+                        <div className={`${flexBetween} gap-8`}>
+                            <p>Sign in</p>
+                            <ActionButton setSelectedPage={setSelectedPage}>Become an Apprentice</ActionButton>
+                        </div>
+                </div>
+                <button 
+                        className="block sm:hidden rounded-full bg-primary-orange p-2"
+                        onClick={() => setIsMenuToggled(!isMenuToggled)}
+                        >
+                            <Bars3Icon className="h-6 w-6 text-primary-white"/>
+                </button>
+            </div>  
+        </div>
+        {isMenuToggled && (
+            <div className="fixed sm:hidden right-0 bottom-0 z-40 h-full w-[300px] bg-primary-yellow">
+                <div className="flex justify-end py-6 pr-16">
+                    <button 
+                    className="rounded-full bg-primary-orange p-2" 
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    >
+                        <XMarkIcon className="h-6 w-6 text-white"/>
+                    </button>
+                </div>
+                <div className="ml-[20%] flex flex-col gap-10 text-xl">
                                 <Link 
                                     page="Home"
                                     selectedPage={selectedPage}
@@ -45,21 +88,8 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                                     setSelectedPage={setSelectedPage}
                                 />
                             </div>
-                            <div className={`${flexBetween} gap-8 border-2 border-red-400`}>
-                                <p>Sign in</p>
-                                <ActionButton setSelectedPage={setSelectedPage}>Become an Apprentice</ActionButton>
-                            </div>
-                        </div>
-                    </div>
-                    <button 
-                        className="block sm:hidden rounded-full bg-primary-orange p-2"
-                        onClick={() => setIsMenuToggled(!isMenuToggled)}
-                        >
-                            <Bars3Icon className="h-6 w-6 text-primary-white"/>
-                    </button>
-                </div>
             </div>
-        </div>
+        )}
     </nav>
   )
 }
