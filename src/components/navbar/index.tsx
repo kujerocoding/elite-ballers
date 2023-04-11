@@ -3,6 +3,7 @@ import {Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import Logo from "@/assets/image/Logo.png"
 import Link from "./Link"
 import { SelectedPage } from "@/shared/types"
+import ActionButton from "@/shared/ActionButton"
 
 type Props = {
     selectedPage: SelectedPage,
@@ -46,11 +47,9 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                             </div>
                             <div className={`${flexBetween} gap-8 border-2 border-red-400`}>
                                 <p>Sign in</p>
-                                <button>Become an Apprentice</button>
+                                <ActionButton setSelectedPage={setSelectedPage}>Become an Apprentice</ActionButton>
                             </div>
                         </div>
-                        
-
                     </div>
                     <button 
                         className="block sm:hidden rounded-full bg-primary-orange p-2"
