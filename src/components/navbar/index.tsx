@@ -6,18 +6,20 @@ import { SelectedPage } from "@/shared/types"
 import ActionButton from "@/shared/ActionButton"
 
 type Props = {
+    isTopOfPage: boolean,
     selectedPage: SelectedPage,
     setSelectedPage: (value: SelectedPage) => void
 }
 
-const Navbar = ({selectedPage, setSelectedPage}: Props) => {
+const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
 
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
     const flexBetween = "flex items-center justify-between"
+    const navbarBG = isTopOfPage ? "" : "bg-primary-yellow"
 
   return (
     <nav>
-        <div className={`${flexBetween} fixed top-0 z-30 w-full py-6 `}>
+        <div className={`${navbarBG} ${flexBetween} fixed top-0 z-30 w-full py-6 `}>
             <div className={`${flexBetween} mx-auto w-5/6 gap-16 `}>
                 <img className="w-20" src={Logo} alt="log" />
                 <div className={`sm:${flexBetween} w-full hidden`}>
@@ -87,7 +89,7 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
                                 />
-                            </div>
+                </div>
             </div>
         )}
     </nav>
