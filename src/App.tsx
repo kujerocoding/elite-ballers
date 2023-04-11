@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '@/components/navbar'
 import { SelectedPage } from '@/shared/types'
 import Home from '@/components/home'
+import AboutUs from '@/components/aboutus'
 
 
 const App = () => {
@@ -27,8 +28,8 @@ const App = () => {
       isTopOfPage={isTopOfPage}
       selectedPage={selectedPage}
       setSelectedPage={setSelectedPage}/>
-      <Home 
-      setSelectedPage={setSelectedPage}/>
+      <Home setSelectedPage={setSelectedPage}/>
+      <AboutUs setSelectedPage={setSelectedPage}/>
     </div>
   )
 }
