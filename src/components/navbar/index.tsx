@@ -5,13 +5,13 @@ import Link from "./Link"
 import { SelectedPage } from "@/shared/types"
 
 type Props = {
-    
     selectedPage: SelectedPage,
     setSelectedPage: (value: SelectedPage) => void
 }
 
 const Navbar = ({selectedPage, setSelectedPage}: Props) => {
 
+    const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
     const flexBetween = "flex items-center justify-between"
 
   return (
@@ -20,8 +20,7 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
             <div className={`${flexBetween} mx-auto w-5/6 border-2 border-green-500`}>
                 <div className={`${flexBetween} w-full gap-16 border-2 border-orange-500`}>
                     <img className="w-14" src={Logo} alt="log" />
-
-                    <div className={`${flexBetween} w-full border-2 border-black`}>
+                    <div className={`sm:${flexBetween} w-full border-2 border-black hidden`}>
                         <div className={`${flexBetween} w-full border-2 border-blue-500`}>
                             <div className={`${flexBetween} gap-8 text-sm border-2 border-red-500`}>
                                 <Link 
@@ -44,18 +43,21 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
                                 />
-
                             </div>
                             <div className={`${flexBetween} gap-8 border-2 border-red-400`}>
                                 <p>Sign in</p>
                                 <button>Become an Apprentice</button>
                             </div>
                         </div>
-                        <div>
-
-                        </div>
+                        
 
                     </div>
+                    <button 
+                        className="block sm:hidden rounded-full bg-primary-orange p-2"
+                        onClick={() => setIsMenuToggled(!isMenuToggled)}
+                        >
+                            <Bars3Icon className="h-6 w-6 text-primary-white"/>
+                    </button>
                 </div>
             </div>
         </div>
