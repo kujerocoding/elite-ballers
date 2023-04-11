@@ -24,7 +24,7 @@ const Home = ({setSelectedPage}: Props) => {
                     </AnchorLink>
                 </div>
             </div>
-            <div className='sm:basis-1/3'>
+            <div className='sm:w-[300px]'>
                 <img className='rounded-lg' src={HomeGraphic} alt="home-graphic" />
             </div>
         </div>
