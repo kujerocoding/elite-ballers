@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from '@/components/navbar'
+import { SelectedPage } from '@/shared/types'
 
-type Props = {}
 
-const App = (props: Props) => {
+const App = () => {
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
   return (
-    <div className='app'>App</div>
+    <div className='app'>
+      <Navbar 
+      selectedPage={selectedPage}
+      setSelectedPage={setSelectedPage}/>
+    </div>
   )
 }
 
