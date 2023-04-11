@@ -15,13 +15,13 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
 
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
     const flexBetween = "flex items-center justify-between"
-    const navbarBG = isTopOfPage ? "" : "bg-primary-yellow"
+    const navbarBG = isTopOfPage ? "" : "bg-primary-yellow drop-shadow"
 
   return (
     <nav>
         <div className={`${navbarBG} ${flexBetween} fixed top-0 z-30 w-full py-6 `}>
             <div className={`${flexBetween} mx-auto w-5/6 gap-16 `}>
-                <img className="w-20" src={Logo} alt="log" />
+                <img className="w-24" src={Logo} alt="log" />
                 <div className={`sm:${flexBetween} w-full hidden`}>
                         <div className={`${flexBetween} gap-8 text-sm `}>
                                 <Link 
@@ -60,7 +60,7 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
         </div>
         {isMenuToggled && (
             <div className="fixed sm:hidden right-0 bottom-0 z-40 h-full w-[300px] bg-primary-yellow">
-                <div className="flex justify-end py-6 pr-16">
+                <div className="flex justify-end py-6 pr-12">
                     <button 
                     className="rounded-full bg-primary-orange p-2" 
                     onClick={() => setIsMenuToggled(!isMenuToggled)}
