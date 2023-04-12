@@ -65,7 +65,7 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
             </div>  
         </div>
         {isMenuToggled && (
-            <div className="fixed sm:hidden right-0 bottom-0 z-40 h-full w-[300px] bg-primary-yellow">
+            <div className="fixed sm:hidden right-0 bottom-0 z-60 h-full w-[300px] bg-primary-yellow">
                 <div className="flex justify-end py-6 pr-12">
                     <button 
                     className="rounded-full bg-primary-orange p-2" 
