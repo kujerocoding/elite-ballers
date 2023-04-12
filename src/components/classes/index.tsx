@@ -3,6 +3,7 @@ import ClassesGraphic1 from '@/assets/image/ClassesGraphic1.jpg'
 import ClassesGraphic2 from '@/assets/image/ClassesGraphic2.jpg'
 import ClassesGraphic3 from '@/assets/image/ClassesGraphic3.jpg'
 import ClassesGraphic4 from '@/assets/image/ClassesGraphic4.jpg'
+import ClassesGraphic5 from '@/assets/image/ClassesGraphic5.jpg'
 import { motion } from 'framer-motion'
 import HText from '@/shared/HText'
 import Class from './Class'
@@ -29,8 +30,8 @@ const classes:Array<ClassType> =[
         image: ClassesGraphic4
     },
     {
-        name: "Personalized Coaching Plans",
-        image: ClassesGraphic4
+        name: "Advance Course",
+        image: ClassesGraphic5
     }
 ]
 
