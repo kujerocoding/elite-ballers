@@ -4,6 +4,7 @@ import Logo from "@/assets/image/Logo.png"
 import Link from "./Link"
 import { SelectedPage } from "@/shared/types"
 import ActionButton from "@/shared/ActionButton"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 type Props = {
     isTopOfPage: boolean,
@@ -21,7 +22,12 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
     <nav>
         <div className={`${navbarBG} ${flexBetween} fixed top-0 z-30 w-full py-6 `}>
             <div className={`${flexBetween} mx-auto w-5/6 gap-16 `}>
-                <img className="w-24" src={Logo} alt="log" />
+                <AnchorLink href="#home"
+                    onClick={() => setSelectedPage(SelectedPage.Home)}>
+                    <img className="w-24" src={Logo} alt="logo" />
+                </AnchorLink>
+                    
+                
                 <div className={`sm:${flexBetween} w-full hidden`}>
                         <div className={`${flexBetween} gap-8 text-sm `}>
                                 <Link 
