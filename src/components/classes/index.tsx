@@ -44,10 +44,19 @@ const Classes = ({setSelectedPage}: Props) => {
     <section id='classes' className='w-full py-24'>
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Classes)}>
             <motion.div className='flex items-center w-5/6 mx-auto'>
-                <div className='sm:w-2/3 mb-14'>
+                <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true, amount: 0.5}} 
+                transition={{duration: 0.5}}
+                variants={{
+                    hidden: {opacity: 0, x:-100},
+                    visible: {opacity: 1, x:0}
+                }}
+                className='sm:w-2/3 mb-14'>
                     <HText>Classes</HText>
                     <p>At Elite Ballers, we offer a range of services to help players improve their skills and reach their full potential on the court. Here are some of the services we offer:</p>
-                </div>
+                </motion.div>
             </motion.div>
             <div className='h-[400px] w-full overflow-x-auto overflow-y-hidden'>
                 <ul className='w-[1800px] whitespace-nowrap'>

@@ -28,13 +28,31 @@ const ContactUs = ({setSelectedPage}: Props) => {
   return (
     <section id='contactus' className='mx-auto w-5/6 py-24'>
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
-            <motion.div className='sm:w-2/3 pb-0 sm:pb-14'>
+            <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once: true, amount: 0.5}} 
+            transition={{duration: 0.5}}
+            variants={{
+                hidden: {opacity: 0, x:-100},
+                visible: {opacity: 1, x:0}
+            }}
+            className='sm:w-2/3 pb-0 sm:pb-14'>
                 <HText>Join now to get to the next level</HText>
                 <p>Our coaches will work with you one-on-one to develop a customized training plan that takes into account your strengths, weaknesses, and goals, and provides you with the individual attention you need to reach your full potential.</p>
             </motion.div>
             <div className='sm:flex items-start justify-between'>
             <div className='mt-10 sm:mt-0 justify-between gap-8 flex sm:basis-3/5'>
-                <div>
+                <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: true, amount: 0.5}} 
+                transition={{duration: 0.5}}
+                variants={{
+                    hidden: {opacity: 0, y:100},
+                    visible: {opacity: 1, y:0}
+                }}
+                >
                     <form 
                     target='_blank'
                     onSubmit={onSubmit}
@@ -94,7 +112,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                         </button>
 
                     </form>
-                </div>
+                </motion.div>
             </div>
             <div className='mt-10 sm:mt-0 sm:w-[300px]'>
                 <img className='rounded-lg' src={ContactUsGraphic} alt="contactus-graphic" />

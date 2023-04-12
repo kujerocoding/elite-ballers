@@ -14,10 +14,19 @@ const AboutUs = ({setSelectedPage}: Props) => {
   return (
     <section id="aboutus" className='mx-auto min-h-full w-5/6 py-24'>
         <motion.div className='flex flex-col gap-14' onViewportEnter={() => setSelectedPage(SelectedPage.AboutUs)}>
-            <div className='sm:w-2/3'>
+            <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once: true, amount: 0.5}} 
+            transition={{duration: 0.5}}
+            variants={{
+                hidden: {opacity: 0, x:-100},
+                visible: {opacity: 1, x:0}
+            }}
+            className='sm:w-2/3'>
                 <HText>About Us</HText>
                 <p>We are a team of experienced basketball coaches who are passionate about helping players improve their skills and reach their full potential.</p>
-            </div>
+            </motion.div>
             <div className='sm:flex items-center gap-8'>
                 <div className='mb-14 sm:mb-0 sm:basis-1/2'>
                     <img className='rounded-lg' src={AboutGraphic} alt="about-graphic" />
