@@ -12,7 +12,7 @@ type Props = {
 
 const AboutUs = ({setSelectedPage}: Props) => {
   return (
-    <section id="aboutus" className='mx-auto min-h-full w-5/6 py-24'>
+    <section id="aboutus" className='mx-auto min-h-full w-5/6 py-24 text-gray-700'>
         <motion.div className='flex flex-col gap-14' onViewportEnter={() => setSelectedPage(SelectedPage.AboutUs)}>
             <motion.div 
             initial="hidden"

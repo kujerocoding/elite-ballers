@@ -20,11 +20,11 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
 
   return (
     <nav>
-        <div className={`${navbarBG} ${flexBetween} fixed top-0 z-30 w-full py-6 `}>
+        <div className={`${navbarBG} ${flexBetween} fixed top-0 z-50 w-full py-6 `}>
             <div className={`${flexBetween} mx-auto w-5/6 gap-16 `}>
                 <AnchorLink href={`#${SelectedPage.Home}`}
                     onClick={() => setSelectedPage(SelectedPage.Home)}>
-                    <img className="w-24" src={Logo} alt="logo" />
+                    <img className="w-28" src={Logo} alt="logo" />
                 </AnchorLink>
                     
                 

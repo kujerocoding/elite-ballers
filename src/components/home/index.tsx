@@ -26,7 +26,7 @@ const Home = ({setSelectedPage}: Props) => {
             }}
             className='flex flex-col gap-4 mb-8 sm:mb-0 sm:basis-3/5'>
                 <h1 className='font-anton text-4xl sm:text-6xl sm:leading-tight max-w-sm'>Welcome to the <span className='whitespace-nowrap'>Elite Ballers</span> <span className='whitespace-nowrap'>Training Camp</span> </h1>
-                <p>Here you'll find everything you need to take your basketball skills to the next level.</p>
+                <p className='text-gray-700'>Here you'll find everything you need to take your basketball skills to the next level.</p>
                 <motion.div 
                 initial="hidden"
                 whileInView="visible"
