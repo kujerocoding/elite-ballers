@@ -3,6 +3,7 @@ import Navbar from '@/components/navbar'
 import { SelectedPage } from '@/shared/types'
 import Home from '@/components/home'
 import AboutUs from '@/components/aboutus'
+import Classes from '@/components/classes'
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       setSelectedPage={setSelectedPage}/>
       <Home setSelectedPage={setSelectedPage}/>
       <AboutUs setSelectedPage={setSelectedPage}/>
+      <Classes setSelectedPage={setSelectedPage}/>
     </div>
   )
 }

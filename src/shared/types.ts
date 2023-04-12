@@ -4,3 +4,9 @@
     Classes = "classes",
     ContactUs = "contactus"
   }
+
+  export interface ClassType {
+    name: string;
+    description?: string;
+    image: string;
+  }
