@@ -20,5 +20,3 @@ const Class = ({name, description, image}: Props) => {
 }
 
 export default Class
-
-/* absolute text-white bg-primary-light-orange whitespace-normal opacity-0 transition duration-500 hover:opacity-90  */
