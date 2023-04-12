@@ -26,13 +26,13 @@ const ContactUs = ({setSelectedPage}: Props) => {
     }
 
   return (
-    <section id='contactus' className='mx-auto border-2 border-black w-5/6 pb-24'>
+    <section id='contactus' className='mx-auto w-5/6 pb-24'>
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
             <motion.div className='sm:w-2/3 pb-0 sm:pb-14'>
                 <HText>Join now to get to the next level</HText>
                 <p>Our coaches will work with you one-on-one to develop a customized training plan that takes into account your strengths, weaknesses, and goals, and provides you with the individual attention you need to reach your full potential.</p>
             </motion.div>
-            <div className='sm:flex items-start justify-center gap-8'>
+            <div className='sm:flex items-start justify-between'>
             <div className='mt-10 sm:mt-0 justify-between gap-8 flex sm:basis-3/5'>
                 <div>
                     <form 
