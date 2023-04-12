@@ -62,7 +62,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                         <input 
                             type="text" 
                             className={inputStyles}
-                            placeholder='NAME'
+                            placeholder='Name'
                             {...register("name", {
                                 required: true,
                                 maxLength: 100
@@ -77,7 +77,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                         <input 
                             type="text" 
                             className={inputStyles}
-                            placeholder='EMAIL'
+                            placeholder='Email'
                             {...register("email", {
                                 required: true,
                                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -92,7 +92,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                         <textarea 
                             
                             className={inputStyles}
-                            placeholder='MESSAGE'
+                            placeholder='Message'
                             rows={4}
                             cols={50}
                             {...register("message", {
@@ -107,7 +107,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                             </p>
                         )}
 
-                        <button type='submit' className='mt-5 rounded-lg bg-primary-yellow px-20 py-3 transition duration hover:text-white hover:bg-primary-orange'>
+                        <button type='submit' className='mt-5 rounded-lg bg-primary-yellow px-20 py-3 transition duration hover:text-white hover:bg-primary-orange font-bold'>
                             SUBMIT
                         </button>
 

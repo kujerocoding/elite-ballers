@@ -12,6 +12,7 @@ export default {
         "primary-yellow": "#F2CF66",
         "primary-orange": "#F24405",
         "primary-light-orange": "#F25C05",
+        "secondary-yellow": "#f0d994"
       },
       fontFamily:{
         anton: ["Anton", "sans-serif"],

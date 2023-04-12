@@ -16,7 +16,7 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
 
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
     const flexBetween = "flex items-center justify-between"
-    const navbarBG = isTopOfPage ? "" : "bg-primary-yellow drop-shadow"
+    const navbarBG = isTopOfPage ? "" : "bg-secondary-yellow drop-shadow"
 
   return (
     <nav>

@@ -35,7 +35,7 @@ const App = () => {
       <AboutUs setSelectedPage={setSelectedPage}/>
       <Classes setSelectedPage={setSelectedPage}/>
       <ContactUs setSelectedPage={setSelectedPage}/>
-      <Footer />
+      <Footer setSelectedPage={setSelectedPage} selectedPage={selectedPage}/>
     </div>
   )
 }
