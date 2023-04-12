@@ -40,10 +40,10 @@ type Props = {
 
 const Classes = ({setSelectedPage}: Props) => {
   return (
-    <section id='classes' className='w-full text-center pb-24'>
+    <section id='classes' className='w-full pb-24'>
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Classes)}>
-            <motion.div className='flex items-center justify-center'>
-                <div className='sm:w-3/5 mb-14'>
+            <motion.div className='flex items-center w-5/6 mx-auto'>
+                <div className='sm:w-2/3 mb-14'>
                     <HText>Classes</HText>
                     <p>At Elite Ballers, we offer a range of services to help players improve their skills and reach their full potential on the court. Here are some of the services we offer:</p>
                 </div>

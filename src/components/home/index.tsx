@@ -24,7 +24,7 @@ const Home = ({setSelectedPage}: Props) => {
                 hidden: {opacity: 0, x:-100},
                 visible: {opacity: 1, x:0}
             }}
-            className='text-center flex flex-col items-center gap-4 mb-4 sm:mb-0 sm:basis-3/5'>
+            className='flex flex-col gap-4 mb-4 sm:mb-0 sm:basis-3/5'>
                 <h1 className='font-anton text-4xl sm:text-6xl sm:leading-tight max-w-sm'>Welcome to the <span className='whitespace-nowrap'>Elite Ballers</span> <span className='whitespace-nowrap'>Training Camp</span> </h1>
                 <p>Here you'll find everything you need to take your basketball skills to the next level.</p>
                 <motion.div 
@@ -46,7 +46,7 @@ const Home = ({setSelectedPage}: Props) => {
                     </AnchorLink>
                 </motion.div>
             </motion.div>
-            <div className='sm:w-[300px]'>
+            <div className='sm:w-[300px] sm:mr-10'>
                 <img className='rounded-lg' src={HomeGraphic} alt="home-graphic" />
             </div>
         </motion.div>

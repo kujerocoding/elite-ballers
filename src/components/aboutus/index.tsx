@@ -12,8 +12,8 @@ type Props = {
 
 const AboutUs = ({setSelectedPage}: Props) => {
   return (
-    <section id="aboutus" className='mx-auto min-h-full w-5/6 py-24 text-center'>
-        <motion.div className='flex flex-col gap-14 justify-center items-center' onViewportEnter={() => setSelectedPage(SelectedPage.AboutUs)}>
+    <section id="aboutus" className='mx-auto min-h-full w-5/6 py-24'>
+        <motion.div className='flex flex-col gap-14' onViewportEnter={() => setSelectedPage(SelectedPage.AboutUs)}>
             <div className='sm:w-2/3'>
                 <HText>About Us</HText>
                 <p>We are a team of experienced basketball coaches who are passionate about helping players improve their skills and reach their full potential.</p>
@@ -38,7 +38,7 @@ const AboutUs = ({setSelectedPage}: Props) => {
                         hidden: {opacity: 0, y:100},
                         visible: {opacity: 1, y:0}
                     }}
-                    className='flex items-center gap-4 text-sm mt-8 justify-center'>
+                    className='flex items-center gap-4 text-sm mt-8'>
                         <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
                         <AnchorLink 
                             className='text-primary-orange font-bold underline'
