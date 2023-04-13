@@ -36,7 +36,7 @@ const Home = ({setSelectedPage}: Props) => {
                     hidden: {opacity: 0, x:-100},
                     visible: {opacity: 1, x:0}
                 }}
-                className='flex items-center gap-4 text-sm'>
+                className='flex items-center gap-8 text-sm'>
                     <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
                     <AnchorLink 
                         className='text-primary-orange font-bold underline'
@@ -47,7 +47,7 @@ const Home = ({setSelectedPage}: Props) => {
                 </motion.div>
             </motion.div>
             <div className='sm:w-[300px] sm:mr-10'>
-                <img className='rounded-lg' src={HomeGraphic} alt="home-graphic" />
+                <img className='rounded-t-full' src={HomeGraphic} alt="home-graphic" />
             </div>
         </motion.div>
     </section>
