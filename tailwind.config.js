@@ -17,6 +17,9 @@ export default {
       fontFamily:{
         anton: ["Anton", "sans-serif"],
         roboto:["Roboto", "sans-serif"]
+      },
+      backgroundImage: {
+        'bg-pattern': "url('./src/assets/image/hero-pattern.svg')",
       }
     },
     screens: {

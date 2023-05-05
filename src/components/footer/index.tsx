@@ -9,7 +9,7 @@ type Props = {
 
 const Footer = ({selectedPage, setSelectedPage}: Props) => {
   return (
-    <footer className='bg-secondary-yellow pt-16 text-gray-700'>
+    <footer className='pt-10 text-primary-light-orange bg-gray-800'>
         <div className='mx-auto w-5/6 gap-16 md:flex'>
             <div className='basis-1/2'>
                 <img className='w-24' src={Logo} alt="logo" />
@@ -45,7 +45,7 @@ const Footer = ({selectedPage, setSelectedPage}: Props) => {
                 <p className='my-5 text-sm'>+63 817 342 6235</p>
             </div>
         </div>
-        <p className='w-full text-center mx-auto mt-16 text-gray-100 text-sm bg-primary-orange py-4 '>
+        <p className='w-full text-xs text-center mx-auto mt-10 py-10'>
             &copy; Copyright 2023 - EliteBallers - All Rights Reserved</p>
     </footer>
   )

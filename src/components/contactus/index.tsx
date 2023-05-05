@@ -1,7 +1,7 @@
 import { SelectedPage } from '@/shared/types'
 import { motion } from 'framer-motion'
 import {useForm} from 'react-hook-form'
-import ContactUsGraphic from '@/assets/image/ContactUsGraphic.jpg'
+import ContactUsGraphic from '@/assets/image/ContactUsGraphic.svg'
 import HText from '@/shared/HText'
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 
 const ContactUs = ({setSelectedPage}: Props) => {
 
-    const inputStyles = `mb-5 rounded-lg w-full rounde-lg bg-primary-light-orange px-5 py-3 placeholder-white focus:outline-slate-500`
+    const inputStyles = `mb-5 rounded-lg w-full rounde-lg bg-primary-light-orange px-5 py-3 placeholder-gray-200 focus:outline-primary-yellow`
 
     const {
         register,
@@ -26,7 +26,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
     }
 
   return (
-    <section id='contactus' className='mx-auto w-5/6 py-24 text-gray-700'>
+    <section id='contactus' className='mx-auto w-5/6 py-24 text-primary-light-orange'>
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
             <motion.div 
             initial="hidden"
@@ -41,7 +41,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                 <HText>Join now to get to the next level</HText>
                 <p>Our coaches will work with you one-on-one to develop a customized training plan that takes into account your strengths, weaknesses, and goals, and provides you with the individual attention you need to reach your full potential.</p>
             </motion.div>
-            <div className='sm:flex items-start justify-between'>
+            <div className='relative sm:flex items-start justify-between'>
             <div className='mt-10 sm:mt-0 justify-between gap-8 flex sm:basis-3/5'>
                 <motion.div
                 className='w-full'
@@ -108,15 +108,15 @@ const ContactUs = ({setSelectedPage}: Props) => {
                             </p>
                         )}
 
-                        <button type='submit' className='mt-5 rounded-lg bg-primary-yellow px-20 py-3 transition duration hover:text-white hover:bg-primary-orange text-sm text-primary-black'>
+                        <button type='submit' className='mt-5 rounded-lg text-primary-orange bg-primary-yellow px-20 py-3 transition duration hover:text-white hover:bg-primary-orange text-sm '>
                             SUBMIT
                         </button>
 
                     </form>
                 </motion.div>
             </div>
-            <div className='mt-10 sm:mt-0 sm:w-[300px]'>
-                <img className='rounded-lg' src={ContactUsGraphic} alt="contactus-graphic" />
+            <div className='hidden sm:block sm:absolute right-0 -top-32 mt-10 sm:mt-0 sm:w-[250px]'>
+                <img src={ContactUsGraphic} alt="contactus-graphic" />
             </div>
             </div>
             

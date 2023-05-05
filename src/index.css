@@ -7,7 +7,7 @@
 body{
     min-height: 100vh;
     font-family: "Robot", sans-serif;
-    @apply text-primary-black bg-primary-white;
+    @apply text-primary-black bg-bg-pattern bg-local bg-no-repeat bg-cover;
 }
 
 .app{
