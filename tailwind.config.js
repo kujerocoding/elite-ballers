@@ -19,7 +19,7 @@ export default {
         roboto:["Roboto", "sans-serif"]
       },
       backgroundImage: {
-        'bg-pattern': "url('/assets/image/hero-pattern.svg')",
+        'bg-pattern': "url('./assets/image/hero-pattern.svg')",
       }
     },
     screens: {

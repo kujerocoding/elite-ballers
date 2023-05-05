@@ -26,7 +26,7 @@ const App = () => {
   },[])
 
   return (
-    <div className='app'>
+    <div className='app bg-bg-pattern bg-local bg-no-repeat bg-cover'>
       <Navbar 
       isTopOfPage={isTopOfPage}
       selectedPage={selectedPage}
