@@ -1,10 +1,8 @@
 import { SelectedPage } from '@/shared/types'
-import React from 'react'
 import {motion} from 'framer-motion'
 import HText from '@/shared/HText'
 import AboutGraphic from '@/assets/image/AboutGraphic.svg'
 import ActionButton from '@/shared/ActionButton'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -12,7 +10,7 @@ type Props = {
 
 const AboutUs = ({setSelectedPage}: Props) => {
   return (
-    <section id="aboutus" className='mx-auto min-h-full w-5/6 mt-10 py-10 text-primary-light-orange'>
+    <section id="aboutus" className='mx-auto w-5/6 py-24 text-primary-light-orange'>
         <motion.div className='flex flex-col gap-14' onViewportEnter={() => setSelectedPage(SelectedPage.AboutUs)}>
             <motion.div 
             initial="hidden"
@@ -32,11 +30,10 @@ const AboutUs = ({setSelectedPage}: Props) => {
                     <img src={AboutGraphic} alt="about-graphic" />
                 </div>
                 <div className='flex flex-col gap-4 px-4 sm:basis-2/3'>
-                    
                     <p>Our experienced coaches are passionate about basketball and dedicated to helping our clients achieve their goals. Whether you're looking to improve your shooting, dribbling, defense, or teamwork, we have the knowledge and expertise to help you get there.</p>
                     <div>
-                <p>So why choose Elite Ballers? With our personalized coaching plans, flexible online courses, and range of training materials, we offer a comprehensive approach to basketball training that is tailored to your unique needs and goals.</p>
-                <motion.div 
+                    <p>So why choose Elite Ballers? With our personalized coaching plans, flexible online courses, and range of training materials, we offer a comprehensive approach to basketball training that is tailored to your unique needs and goals.</p>
+                    <motion.div 
                     initial="hidden"
                     whileInView="visible"
                     viewport={{once: true, amount: 0.5}} 
@@ -48,8 +45,8 @@ const AboutUs = ({setSelectedPage}: Props) => {
                     className='flex items-center gap-4 text-sm mt-8'>
                         <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
                         <ActionButton setSelectedPage={setSelectedPage}>Learn More</ActionButton>
-                </motion.div>
-            </div>
+                    </motion.div>
+                    </div>
                 </div>
             </div>
             

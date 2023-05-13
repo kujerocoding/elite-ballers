@@ -1,6 +1,7 @@
 import Logo from '@/assets/image/Logo.png'
 import Link from '../navbar/Link'
 import { SelectedPage } from '@/shared/types'
+import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from 'react-icons/ai'
 
 type Props = {
     selectedPage: SelectedPage
@@ -43,6 +44,11 @@ const Footer = ({selectedPage, setSelectedPage}: Props) => {
                 <h4 className='font-bold mb-8'>Contact Us</h4>
                 <p className='my-5 text-sm'>Santa Maria, Makati City, Philippines</p>
                 <p className='my-5 text-sm'>+63 817 342 6235</p>
+                <div className= 'flex gap-4 text-sm'>
+                    <AiFillFacebook className="w-6 h-6 fill-primary-orange hover:scale-110 cursor-pointer"/>
+                    <AiFillInstagram className="w-6 h-6 fill-primary-orange hover:scale-110 cursor-pointer"/>
+                    <AiFillTwitterSquare className="w-6 h-6 fill-primary-orange hover:scale-110 cursor-pointer"/>
+                </div>
             </div>
         </div>
         <p className='w-full text-xs text-center mx-auto mt-10 py-10'>

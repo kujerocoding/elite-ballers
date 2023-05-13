@@ -6,6 +6,7 @@ import AboutUs from '@/components/aboutus'
 import Classes from '@/components/classes'
 import ContactUs from '@/components/contactus'
 import Footer from '@/components/footer'
+import Pricing from '@/components/pricing'
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
       <Home setSelectedPage={setSelectedPage}/>
       <AboutUs setSelectedPage={setSelectedPage}/>
       <Classes setSelectedPage={setSelectedPage}/>
+      <Pricing setSelectedPage={setSelectedPage}/>
       <ContactUs setSelectedPage={setSelectedPage}/>
       <Footer setSelectedPage={setSelectedPage} selectedPage={selectedPage}/>
     </div>

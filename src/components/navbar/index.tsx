@@ -5,7 +5,7 @@ import Link from "./Link"
 import { SelectedPage } from "@/shared/types"
 import ActionButton from "@/shared/ActionButton"
 import AnchorLink from "react-anchor-link-smooth-scroll"
-import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from 'react-icons/ai'
+
 
 type Props = {
     isTopOfPage: boolean,
@@ -48,17 +48,17 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
                                     setSelectedPage={setSelectedPage}
                                 />
                                 <Link 
+                                    page="Pricing"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <Link 
                                     page="Contact Us"
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
                                 />
                         </div>
                         <div className={`${flexBetween} gap-8 text-sm`}>
-                            <div className={`${flexBetween} gap-2 text-sm`}>
-                            <AiFillFacebook className="w-6 h-6 fill-primary-orange hover:scale-110 cursor-pointer"/>
-                            <AiFillInstagram className="w-6 h-6 fill-primary-orange hover:scale-110 cursor-pointer"/>
-                            <AiFillTwitterSquare className="w-6 h-6 fill-primary-orange hover:scale-110 cursor-pointer"/>
-                            </div>
                             <ActionButton setSelectedPage={setSelectedPage}>Become an Apprentice</ActionButton>
                         </div>
                 </div>
@@ -98,6 +98,13 @@ const Navbar = ({isTopOfPage,selectedPage, setSelectedPage}: Props) => {
                     <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                         <Link 
                             page="Classes"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                    </button>
+                    <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                        <Link 
+                            page="Pricing"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
