@@ -10,7 +10,7 @@ type Props = {
 
 const ContactUs = ({setSelectedPage}: Props) => {
 
-    const inputStyles = `mb-5 rounded-lg w-full rounde-lg bg-primary-light-orange px-5 py-3 placeholder-gray-200 focus:outline-primary-yellow`
+    const inputStyles = `mb-5 rounded-lg w-full rounde-lg bg-primary-light-orange px-5 py-3 placeholder-gray-200 focus:outline-primary-yellow text-white`
 
     const {
         register,
@@ -59,7 +59,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                     onSubmit={onSubmit}
                     method='POST'
                     action='https://formsubmit.co/e7ca1745125bc360de8abee9d08098d6'>
-
+                    
                         <input 
                             type="text" 
                             className={inputStyles}
